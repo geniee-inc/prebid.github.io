@@ -46,7 +46,9 @@ Ads are served when all of the following conditions are satisfied:
 - Prebid Server: the impression carries `banner`, `video` or both, on `site` or `app` inventory. See [Prebid Server](#prebid-server).
 - Payment is possible in Japanese yen or US dollars.
 - The request contains either `site` (with `site.page`) or `app` (with `app.bundle`).
-- GDPR does not apply to the request. The Exchange does not serve GDPR territories, so no request is sent when `gdprApplies` is true. The adapter does not add consent signals itself; values written to `ortb2` by the TCF consent module (`regs.ext.gdpr`, `user.ext.consent`) are passed through with the rest of the first party data.
+- GDPR does not apply to the request. The Exchange does not serve GDPR territories.
+  - Prebid.js: no request is sent when `gdprApplies` is true. The adapter does not add consent signals itself; values written to `ortb2` by the TCF consent module (`regs.ext.gdpr`, `user.ext.consent`) are passed through with the rest of the first party data.
+  - Prebid Server: no bids are returned when GDPR applies. With the default TCF enforcement, Prebid Server does not send the request, because `ex_geniee` has no GVL ID. If the host relaxes that enforcement, the Exchange rejects requests that carry `regs.gdpr=1`.
 
 ## Bid Params
 
