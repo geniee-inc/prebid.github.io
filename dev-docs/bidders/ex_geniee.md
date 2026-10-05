@@ -30,6 +30,11 @@ sidebarType: 1
 
 This is the [Geniee](https://geniee.co.jp) *Exchange* Bidder Adapter for Prebid.js and Prebid Server.
 
+Supported media types differ between Prebid.js and Prebid Server:
+
+- Prebid.js: banner only.
+- Prebid Server: banner and video only.
+
 {: .alert.alert-info :}
 Geniee maintains three separate bid adapters. This adapter (`ex_geniee`) is independent of "Geniee SSP" (`ssp_geniee`, `zoneId` based) and "Geniee" (`dsp_geniee`, Geniee DSP) and can be used alongside them.
 
