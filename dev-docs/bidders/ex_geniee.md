@@ -81,7 +81,7 @@ Support for OpenRTB blocking parameters is partial. All four parameters below ar
 
 Notes:
 
-- `badv`: every listed domain is checked against the winning bid's advertiser domains. A bid whose advertiser domain contains a listed value is dropped, so `example.com` also blocks subdomains such as `ads.example.com`. An empty array is forwarded as an explicit "nothing blocked" declaration.
+- `badv`: every listed domain is checked against the winning bid's advertiser domains. A bid whose advertiser domain contains a listed value is dropped, so `example.com` also blocks subdomains such as `ads.example.com`. An empty array is forwarded as an explicit "nothing blocked" declaration (Prebid.js only).
 - `bapp`: matched case-insensitively against the bid's app bundle.
 - `bcat`: only IAB content taxonomy codes with the `IAB` prefix (for example `IAB1`, `IAB26-1`) are forwarded; codes in any other format are dropped.
 - `battr`: in Prebid.js only `banner.battr` applies, since that adapter is banner-only. Prebid Server forwards `video.battr` as well.
