@@ -111,7 +111,7 @@ Prebid Server supports banner and video on both `site` and `app` inventory.
 
 - A banner needs `w` and `h`, or a `format[0]` entry to derive them from.
 - A video needs `mimes`; `w` and `h` are recommended. Other `video` fields are forwarded as received.
-- An impression with both `banner` and `video` is forwarded with both. If one of the two is unusable (banner without a size, video without `mimes`), only the other is sent.
+- An impression with both `banner` and `video` is forwarded with both. If one of the two is unusable (banner without a size), only the other is sent.
 - The request's `cur` must contain `JPY` or `USD`; when omitted, `USD` is assumed.
 - User sync is iframe only and is skipped when GDPR applies.
 
